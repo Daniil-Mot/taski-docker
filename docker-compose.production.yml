@@ -18,6 +18,7 @@ services:
       - static_volume:/backend_static
     depends_on:
       - db
+    restart: always
   frontend:
     image: agnito31/taski_frontend
     env_file: .env
@@ -37,3 +38,4 @@ services:
     depends_on:
       - db
       - backend
+    restart: always
